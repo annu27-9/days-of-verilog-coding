@@ -21,9 +21,9 @@
 
 
 module BOOTH_MUL(m,q0,Mul);
-input [3:0]m,q0;
+input [3:0]m,q0;//m is multiplicand and q0 is multiplier
 output [7:0]Mul;
-reg [3:0] Ac;
+reg [3:0] Ac;//Ac is Accumulator 
 reg q;
 
 reg [8:0] con;
@@ -36,7 +36,7 @@ end
 always@(*)
 begin
 
-con = {Ac,q0,q};
+con = {Ac,q0,q};//con is concatenation of Ac, q0 and q
  for(i=0;i<4;i=i+1)
         begin
           
